@@ -16,5 +16,3 @@ export default class Todo extends React.Component {
     )
   }
 }
-
-//display task, p

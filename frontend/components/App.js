@@ -6,16 +6,7 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      todos: [{
-          name: 'Organize Garage',
-          id: 1528817077286, // could look different, you could use a timestamp to generate it
-          completed: false
-        },
-        {
-          name: 'Bake Cookies',
-          id: 1528817084358,
-          completed: false
-        }],
+      todos: [],
       itemText:'',
     }
   }
@@ -52,6 +43,9 @@ export default class App extends React.Component {
     this.setState({
       todos: [...this.state.todos, newTodo]
     })
+    this.setState({
+      itemText: ''
+    })
   }
 
   handleSubmit = evt => {
@@ -73,5 +67,3 @@ export default class App extends React.Component {
     )
   }
 }
-
-//hold all state, all handlers

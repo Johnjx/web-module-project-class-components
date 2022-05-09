@@ -18,10 +18,8 @@ export default class Form extends React.Component {
           <button>Add Todo</button>
         </form>
         <button onClick={() => this.props.clear()}>Clear Completed</button>
+        <button>Hide/Show</button>
       </div>
     )
   }
 }
-
-//form, input, submit(add todo) (also on keydown Enter)
-//clear completed button (hide and show)

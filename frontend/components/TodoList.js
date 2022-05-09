@@ -21,5 +21,3 @@ export default class TodoList extends React.Component {
     )
   }
 }
-
-//receives todos arr, generate new Todo comp for each object ele
