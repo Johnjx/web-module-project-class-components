@@ -7,7 +7,7 @@ export default class Todo extends React.Component {
 
   render() {
     return (
-      <div>
+      <div onClick={() => this.props.toggle(this.props.item.id)}>
         <p>{this.props.item.name}</p>
       </div>
     )

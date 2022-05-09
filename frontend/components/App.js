@@ -20,6 +20,17 @@ export default class App extends React.Component {
     }
   }
 
+  toggleItem = itemId => {
+    this.setState({
+      todos: this.state.todos.map(item => {
+        if (itemId === item.id) {
+          return {...item, completed: !item.completed}
+        }
+        return item;
+      })
+    })
+  }
+
   handleChange = (evt) => {
     this.setState({
       itemText: evt.target.value
@@ -45,7 +56,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <TodoList todos={this.state.todos} />
+        <TodoList todos={this.state.todos} toggle={this.toggleItem}/>
         <Form itemText={this.state.itemText} change={this.handleChange} submit={this.handleSubmit} />
       </div>
     )
