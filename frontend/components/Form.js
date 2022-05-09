@@ -9,3 +9,6 @@ export default class Form extends React.Component {
     )
   }
 }
+
+//form, input, submit(add todo) (also on keydown Enter)
+//clear completed button (hide and show)
