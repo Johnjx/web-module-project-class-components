@@ -63,6 +63,10 @@ nav a.active {
   color: #ff4b00;
 }
 
+.completed {
+  text-decoration: line-through;
+}
+
 #error {
   color: red;
   margin: 1rem 0 1rem 0;
