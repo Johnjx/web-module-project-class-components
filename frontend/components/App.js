@@ -26,11 +26,27 @@ export default class App extends React.Component {
     })
   };
 
+  addTodo = item => {
+    const newTodo = {
+      name: item,
+      id: Date.now(),
+      completed: false
+    }
+    this.setState({
+      todos: [...this.state.todos, newTodo]
+    })
+  }
+
+  handleSubmit = evt => {
+    evt.preventDefault();
+    this.addTodo(this.state.itemText)
+  }
+
   render() {
     return (
       <div>
         <TodoList todos={this.state.todos} />
-        <Form itemText={this.state.itemText} change={this.handleChange} />
+        <Form itemText={this.state.itemText} change={this.handleChange} submit={this.handleSubmit} />
       </div>
     )
   }

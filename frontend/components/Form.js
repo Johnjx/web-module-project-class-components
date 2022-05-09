@@ -4,13 +4,11 @@ export default class Form extends React.Component {
   constructor() {
     super();
   }
-
   
-
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.props.submit}>
           <input
             type="text"
             name="item"
