@@ -1,10 +1,25 @@
 import React from 'react'
 
 export default class Form extends React.Component {
+  constructor() {
+    super();
+  }
+
+  
+
   render() {
     return (
       <div>
-        Form
+        <form>
+          <input
+            type="text"
+            name="item"
+            value={this.props.itemText}
+            onChange={this.props.change}
+          />
+          <button>Add Todo</button>
+        </form>
+        <button>Hide</button>
       </div>
     )
   }
