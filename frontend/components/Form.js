@@ -4,7 +4,7 @@ export default class Form extends React.Component {
   constructor() {
     super();
   }
-  
+
   render() {
     return (
       <div>
@@ -17,7 +17,7 @@ export default class Form extends React.Component {
           />
           <button>Add Todo</button>
         </form>
-        <button>Hide</button>
+        <button onClick={() => this.props.clear()}>Clear Completed</button>
       </div>
     )
   }

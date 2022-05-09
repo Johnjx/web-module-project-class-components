@@ -20,6 +20,12 @@ export default class App extends React.Component {
     }
   }
 
+  clearCompleted = () => {
+    this.setState({
+      todos: this.state.todos.filter(item => !item.completed)
+    })
+  }
+
   toggleItem = itemId => {
     this.setState({
       todos: this.state.todos.map(item => {
@@ -57,7 +63,12 @@ export default class App extends React.Component {
     return (
       <div>
         <TodoList todos={this.state.todos} toggle={this.toggleItem}/>
-        <Form itemText={this.state.itemText} change={this.handleChange} submit={this.handleSubmit} />
+        <Form
+          itemText={this.state.itemText}
+          change={this.handleChange} 
+          submit={this.handleSubmit}
+          clear={this.clearCompleted}
+           />
       </div>
     )
   }
